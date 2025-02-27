@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!--
+This page looks quite confusing.
+It would be much better to use semantic HTML to structure this code.
+Let’s fix this mess!
+(Hints are provided below some elements to help you out.)
+-->
+
+<html lang="en">
+  <head>
+    <title>HTML Basics Excercise</title>
+    <meta charset="UTF-8" />
+  </head>
+  <!-- Someone forgot to wrap the content of our webpage with an HTML element,
+	which one was it again? -->
+  <body>
+    <header>
+      <h1>Jane Doe</h1>
+      <!-- Which elements could be used to link to parts of the webpage,
+		which appear below? -->
+
+      <nav id="nav">
+        <ul>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Skillset</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Looks like the following part is the central content of our webpage. -->
+    <main>
+      <section id="about-me">
+        <h2>About me</h2>
+        <par>
+          Hi there! Welcome to my personal website. Here is gathered the most
+          important information about me. If you want to work with me or get to
+          know me, please don't hesitate to get in contact.
+        </par>
+        <!-- What element could be used to combine an image with a descriptive caption? -->
+        <figure>
+          <img
+            src="https://images.unsplash.com/32/RgJQ82pETlKd0B7QzcJO_5912578701_92397ba76c_b.jpg?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            height="400"
+            alt="a random picture"
+          />
+          <figcaption>
+            A random picture, because I would like to maintain my privacy and
+            let my code speak for me, instead of images.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="https://github.com">GitHub</a></li>
+          <li><a href="https://de.linkedin.com/">LinkedIn</a></li>
+          <li><a href="https://codesandbox.io/">CodeSandbox</a></li>
+        </ul>
+      </section>
+
+      <section id="skills">
+        <h2>Skillset</h2>
+        <!-- This part could use some bulletpoint to be more structured. -->
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Painting Rainbows</li>
+          <li>Party</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
