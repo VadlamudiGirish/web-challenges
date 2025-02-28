@@ -9,17 +9,30 @@ body {
 }
 
 /* Put a selector here to select div elements (see index.html). */
-SELECTOR HERE {
+div {
   font-family: cursive;
   padding: 8px;
+  border: 10px;
 
   /* Set the height and the width of the box to 150px. */
+  height: 150px;
+  width: 150px;
 
   /* Make the background color "hotpink". */
+  background-color: hotpink;
 
   /* Make the text color "white". */
+  color: white;
 
   /* Can you give the box round edges with a radius of 8px? */
+  border-radius: 8px;
 
   /* ✨ Feel free to experiment! */
+  text-align: center;
+  border-color: black;
+  border-style: groove;
+}
+
+div:hover {
+  background-color: rebeccapurple;
 }
