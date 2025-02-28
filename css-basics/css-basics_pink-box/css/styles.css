@@ -12,7 +12,7 @@ body {
 div {
   font-family: cursive;
   padding: 8px;
-  border: 10px;
+  border: 10px blue groove;
 
   /* Set the height and the width of the box to 150px. */
   height: 150px;
@@ -29,8 +29,6 @@ div {
 
   /* ✨ Feel free to experiment! */
   text-align: center;
-  border-color: black;
-  border-style: groove;
 }
 
 div:hover {
