@@ -1,7 +1,7 @@
 /* ==[ ATTENTION! ]== */
 
-/* We have made use of native CSS variables and calculations here to demonstrate their functionality and usefulness. 
-You don't need to adjust these to complete the challenge. Feel free to take a look, then scroll down to the start 
+/* We have made use of native CSS variables and calculations here to demonstrate their functionality and usefulness.
+You don't need to adjust these to complete the challenge. Feel free to take a look, then scroll down to the start
 of the introduction. */
 
 @import "fonts.css";
@@ -49,10 +49,10 @@ of the introduction. */
 
 /* In short: Look at the selectors, then scroll down to the bottom of the file to add your media queries. */
 
-/* Hint 1: Investigate! Take a good, long look at the preview screens to identify 
-which elements need adjustments and at what screen sizes. 
+/* Hint 1: Investigate! Take a good, long look at the preview screens to identify
+which elements need adjustments and at what screen sizes.
 Changing your viewport size or using the developer tools is often helpful.
-Your solution doesn't need to be pixel-perfect. If it looks close enough, it's fine. 
+Your solution doesn't need to be pixel-perfect. If it looks close enough, it's fine.
 Your main objective is to understand the concept of media queries.
 Once you feel ready to write your media queries, scroll down to find prompts where you can write your code.*/
 
@@ -60,7 +60,7 @@ Once you feel ready to write your media queries, scroll down to find prompts whe
 
 /* Hint 3: Sometimes small changes lead to BIG results. */
 
-/* Hint 4: You may need a specific selector to change just one element. 
+/* Hint 4: You may need a specific selector to change just one element.
 If you're unsure, refer to your CSS Basics handout. */
 
 /* Hint 5: CSS Grid might come in handy for certain layouts. Refer to your CSS Flexbox handout for more details! */
@@ -247,3 +247,35 @@ CSS based on conditions such as viewport width, etc. */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
+
+@media screen and (min-width: 800px) {
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card-section > * {
+    width: 48%;
+  }
+  .intro-text {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body,
+  .main-header,
+  .navbar {
+    width: 1000px;
+    margin: auto;
+  }
+  .product-card.--forest {
+    width: 100%;
+  }
+  .main-content {
+    padding: 0;
+  }
+  .card-section {
+    overflow: hidden;
+  }
+}
