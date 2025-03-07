@@ -1,0 +1,53 @@
+@import './variables.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: var(--grey-light);
+  transition: 0.4s ease;
+}
+
+body.dark {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.button:hover {
+  background-color: var(--primary-light);
+}
+
+.button--light {
+  background-color: var(--secondary-light);
+  color: var(--white);
+}
+
+.button--dark {
+  background-color: var(--black-light);
+  color: var(--white);
+}
+
+.button--toggle {
+  background-color: var(--secondary);
+  color: var(--white);
+}
