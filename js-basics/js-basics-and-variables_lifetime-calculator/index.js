@@ -1,8 +1,8 @@
 console.clear();
 
 /*
-Let's calculate some interesting facts based on a user's age! 
-The program expects the user to provide their age as a numerical input. 
+Let's calculate some interesting facts based on a user's age!
+The program expects the user to provide their age as a numerical input.
 The code for receiving this input is provided below.
 
 Calculate the following:
@@ -11,7 +11,7 @@ Calculate the following:
 3. The percentage of life already lived, in relation to the expected life span.
 4. The cumulative number of days the person has spent sleeping, assuming an average of 8 hours of sleep per day.
 
-Log each result with a clear and descriptive message. 
+Log each result with a clear and descriptive message.
 Hint: You can combine text and variables using the `+` operator.
 
 💡 For simplicity, ignore leap years.
@@ -20,3 +20,15 @@ Hint: You can combine text and variables using the `+` operator.
 const currentAge = Number(process.argv[2]); // This takes the `<age>` entered in the command `node index.js <age>`.
 
 console.log("Your current age is: " + currentAge);
+const daysInYear = 365;
+numberOfDaysLived = currentAge * daysInYear;
+console.log("Total number of days the person has lived: " + numberOfDaysLived);
+averageLifeSpanYears = 80;
+averageLifeSpanDays = averageLifeSpanYears * daysInYear;
+remainingDays = averageLifeSpanYears * daysInYear - numberOfDaysLived;
+console.log("Remaining number of days the person will live: " + remainingDays);
+percentageOfLifeAlreadyLived = numberOfDaysLived * (averageLifeSpanDays / 100);
+console.log(
+  "percentage of life already lived -> ",
+  percentageOfLifeAlreadyLived
+);
