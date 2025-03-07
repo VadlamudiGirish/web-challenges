@@ -17,7 +17,7 @@ based on the cost of the meal and the percentage of the tip.
 
 let mealCost = 25;
 let tipPercentage = 20;
-let tipAmount = 25 * (tipPercentage / 100);
+let tipAmount = mealCost * (tipPercentage / 100);
 let totalCost = mealCost + tipAmount;
 
 console.log("Meal cost -> ", mealCost);
