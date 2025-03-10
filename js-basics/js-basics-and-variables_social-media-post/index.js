@@ -11,6 +11,13 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const title = "Javascript Basics!!!";
+const text =
+  "In this class we are going to learn about the javascript basics and variables.";
+let numberOfLikes = 108;
+const user = "Girish Vadlamudi";
+const isReported = false;
+
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +25,12 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+console.log("title:", title);
+console.log("text:", text);
+console.log("numberOfLikes:", numberOfLikes);
+console.log("user:", user);
+console.log("isReported:", isReported);
+numberOfLikes++;
+console.log("numberOfLikesIncreased:", numberOfLikes);
 
 // --^-- write your code here --^--
