@@ -24,6 +24,7 @@ main {
   height: 80px;
   width: 80px;
   text-align: center;
+  position: absolute;
 }
 
 /**
@@ -36,17 +37,25 @@ main {
  */
 
 .box--top-left {
+  top: 10px;
+  left: 10px;
   background-color: #aed6f1;
 }
 
 .box--top-right {
+  top: 10px;
+  right: 10px;
   background-color: #5dade2;
 }
 
 .box--bottom-left {
+  bottom: 10px;
+  left: 10px;
   background-color: #2874a6;
 }
 
 .box--bottom-right {
+  bottom: 10px;
+  right: 10px;
   background-color: #1b4f72;
 }
