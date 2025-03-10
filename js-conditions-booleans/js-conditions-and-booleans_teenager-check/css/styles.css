@@ -1,0 +1,7 @@
+@import './global.css';
+
+form {
+    display: grid;
+    gap: 8px;
+    max-width: 400px;
+}
