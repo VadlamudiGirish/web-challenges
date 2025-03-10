@@ -1,7 +1,7 @@
 console.clear();
 
 /*
-Create a program that calculates the total cost of a meal, including tip, 
+Create a program that calculates the total cost of a meal, including tip,
 based on the cost of the meal and the percentage of the tip.
 
 1. Define two variables:
@@ -14,3 +14,12 @@ based on the cost of the meal and the percentage of the tip.
 
 4. Log a message to the console that includes the meal cost, tip amount, and total cost.
 */
+
+let mealCost = 25;
+let tipPercentage = 20;
+let tipAmount = mealCost * (tipPercentage / 100);
+let totalCost = mealCost + tipAmount;
+
+console.log("Meal cost -> ", mealCost);
+console.log("Tip amount -> ", tipAmount);
+console.log("Total cost -> ", totalCost);
