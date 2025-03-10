@@ -38,29 +38,32 @@ li {
 .user {
   position: relative;
   border: 2px solid lightslategray;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 4px 4px 0 lightslategray;
-  padding: 20px;
-  max-width: 400px;
+  padding: 12px;
+  max-width: 250px;
   margin: 0;
   background-color: white;
 }
 
 .name {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   margin: 0;
 }
 
 .bio {
-  font-size: 14px;
+  font-size: 12px;
   color: darkslategray;
+  margin: 6px 0;
+  display: none;
 }
 
 .location {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
-  text-align: end;
+  text-align: left;
+  color: darkgray;
   margin: 0;
 }
 
@@ -75,11 +78,11 @@ li {
     - reduce the font-size of the .bio to 12px
     - set the margin of the .bio to "6px 0"
     - reduce the font-size of the .location to 10px
-  
+
 
   Make sure to not change the styles of the .user element anywhere else.
-  
-  To facilitate layout debugging, apply the 'debug' class to the <html> element. 
+
+  To facilitate layout debugging, apply the 'debug' class to the <html> element.
   This triggers visual helper styles from 'debug.css' that outline structural elements
   like <body>, <main>, <aside>, <ul>, and .user with labeled overlays for easy identification.
 */
