@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-export default function Counter() {
-  const [people, setPeople] = useState(0);
-
+export default function Counter({ people, setPeople }) {
   return (
     <>
       <h2>How many people would you like to visit us with?</h2>
