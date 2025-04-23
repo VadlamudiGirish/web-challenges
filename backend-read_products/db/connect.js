@@ -26,7 +26,13 @@ async function dbConnect() {
 
   if (!cached.promise) {
     const opts = {
+      family: 4,
       bufferCommands: false,
+      // Add these options
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      // If SSL errors persist:
+      tlsAllowInvalidCertificates: true, // Temporary for testing only
     };
 
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
