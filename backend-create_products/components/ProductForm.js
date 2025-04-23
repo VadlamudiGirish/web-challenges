@@ -1,12 +1,30 @@
 import styled from "styled-components";
 import StyledButton from "@/components/Button";
+import useSWR from "swr";
 
 export default function ProductForm() {
+  const { mutate } = useSWR("/api/products");
+
   async function handleSubmit(event) {
+    const form = event.target;
     event.preventDefault();
 
     const formData = new FormData(event.target);
     const productData = Object.fromEntries(formData);
+
+    const response = await fetch("/api/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(productData),
+    });
+
+    if (response.ok) {
+      mutate();
+    }
+    form.reset();
+    form.elements.name.focus();
   }
 
   return (
@@ -14,15 +32,15 @@ export default function ProductForm() {
       <StyledHeading>Add a new Fish</StyledHeading>
       <StyledLabel htmlFor="name">
         Name:
-        <input type="text" id="name" name="name" />
+        <input required type="text" id="name" name="name" />
       </StyledLabel>
       <StyledLabel htmlFor="description">
         Description:
-        <input type="text" id="description" name="description" />
+        <input required type="text" id="description" name="description" />
       </StyledLabel>
       <StyledLabel htmlFor="price">
         Price:
-        <input type="number" id="price" name="price" min="0" />
+        <input required type="number" id="price" name="price" min="0" />
       </StyledLabel>
       <StyledLabel htmlFor="currency">
         Currency:

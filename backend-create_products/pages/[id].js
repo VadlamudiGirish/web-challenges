@@ -17,6 +17,21 @@ export default function Product() {
     return;
   }
 
+  function render_reviews(data) {
+    return (
+      <>
+        <h3>Reviews:</h3>
+        {data.reviews.map((review) => (
+          <ProductCard key={review.title}>
+            <h4>{review.title}</h4>
+            <p>{review.text}</p>
+            <p>Rating: {review.rating}</p>
+          </ProductCard>
+        ))}
+      </>
+    );
+  }
+
   return (
     <ProductCard>
       <h2>{data.name}</h2>
@@ -24,6 +39,7 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      {data.reviews.length === 0 ? <></> : render_reviews(data)}
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
@@ -32,4 +48,5 @@ export default function Product() {
 export const ProductCard = styled.article`
   padding: 0.5rem 1rem;
   box-shadow: 0px 1px 5px -2px var(--color-granite);
+  margin-bottom: 10px;
 `;
